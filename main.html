@@ -1,0 +1,208 @@
+<!DOCTYPE html> 
+<html lang='en-US' xml:lang='en-US'> 
+<head><title>Why Homomorphism Invoked?</title> 
+<meta charset='utf-8' /> 
+<meta content='TeX4ht (https://tug.org/tex4ht/)' name='generator' /> 
+<meta content='width=device-width,initial-scale=1' name='viewport' /> 
+<link href='main.css' rel='stylesheet' type='text/css' /> 
+<meta content='main.tex' name='src' /> 
+<script>window.MathJax = { tex: { tags: "ams", }, }; </script> 
+<script async='async' id='MathJax-script' src='https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js' type='text/javascript'></script>  
+</head><body>
+   <div class='maketitle'>
+                                                                  
+
+                                                                  
+                                                                  
+
+                                                                  
+
+<h2 class='titleHead'>Why Homomorphism Invoked?</h2>
+ <div class='author'><span class='cmr-12'>ATRAJIT SARKAR</span></div><br />
+<div class='date'><span class='cmr-12'>March 2025</span></div>
+   </div>
+   
+   <h3 class='likesectionHead' id='contents'><a id='x1-1000'></a>Contents</h3>
+   <div class='tableofcontents'>
+   <span class='sectionToc'>1 <a href='#preliminaries' id='QQ2-1-2'>Preliminaries</a></span>
+<br />   <span class='subsectionToc'>1.1 <a href='#definition-of-sets' id='QQ2-1-3'>Definition of Sets</a></span>
+<br />   <span class='subsectionToc'>1.2 <a href='#definition-of-functions' id='QQ2-1-4'>Definition of Functions</a></span>
+<br />   <span class='subsectionToc'>1.3 <a href='#oneone-injective-functions' id='QQ2-1-5'>One-One (Injective) Functions</a></span>
+<br />   <span class='subsectionToc'>1.4 <a href='#onto-surjective-functions' id='QQ2-1-6'>Onto (Surjective) Functions</a></span>
+<br />   <span class='subsectionToc'>1.5 <a href='#homomorphisms' id='QQ2-1-7'>Homomorphisms</a></span>
+<br />   <span class='sectionToc'>2 <a href='#insight' id='QQ2-1-8'>Insight</a></span>
+<br />   <span class='subsectionToc'>2.1 <a href='#function' id='QQ2-1-9'>Function</a></span>
+<br />   <span class='subsubsectionToc'>2.1.1 <a href='#equality-of-set-a-and-b' id='QQ2-1-10'>Equality of Set A and B:</a></span>
+<br />   <span class='subsubsectionToc'>2.1.2 <a href='#equivalence-of-a-and-b' id='QQ2-1-11'>Equivalence Of A and B:</a></span>
+<br />   <span class='subsubsectionToc'>2.1.3 <a href='#bijective-functions' id='QQ2-1-12'>Bijective Functions</a></span>
+<br />   <span class='subsectionToc'>2.2 <a href='#homomorphism' id='QQ2-1-13'>Homomorphism</a></span>
+<br />   <span class='subsubsectionToc'>2.2.1 <a href='#group' id='QQ2-1-14'>Group</a></span>
+<br />   <span class='sectionToc'>3 <a href='#appendix' id='QQ2-1-15'>Appendix</a></span>
+<br />   <span class='subsectionToc'>3.1 <a href='#about-me' id='QQ2-1-16'>About Me</a></span>
+   </div>
+   
+   <h3 class='sectionHead' id='preliminaries'><span class='titlemark'>1   </span> <a id='x1-20001'></a>Preliminaries</h3>
+<!-- l. 20 --><p class='noindent'>In this section, we introduce fundamental concepts necessary for understanding
+homomorphisms.
+   
+                                                                  
+
+                                                                  
+</p>
+   <h4 class='subsectionHead' id='definition-of-sets'><span class='titlemark'>1.1   </span> <a id='x1-30001.1'></a>Definition of Sets</h4>
+<!-- l. 23 --><p class='noindent'>[<span class='cmbx-10'>herstein1975topics</span>] A <span class='cmbx-10'>set </span>is a collection of distinct elements. It is usually
+represented as <span class='mathjax-inline'>\( A = \{a_1, a_2, \dots , a_n\} \)</span>. Two sets are equal if they contain the same elements.
+   
+</p>
+   <h4 class='subsectionHead' id='definition-of-functions'><span class='titlemark'>1.2   </span> <a id='x1-40001.2'></a>Definition of Functions</h4>
+<!-- l. 27 --><p class='noindent'>A <span class='cmbx-10'>function </span><span class='mathjax-inline'>\( f: A \to B \)</span> is a mapping that assigns each element of set <span class='mathjax-inline'>\( A \)</span> to exactly one element of
+set <span class='mathjax-inline'>\( B \)</span>. The set <span class='mathjax-inline'>\( A \)</span> is called the domain, and <span class='mathjax-inline'>\( B \)</span> is the codomain.
+   
+</p>
+   <h4 class='subsectionHead' id='oneone-injective-functions'><span class='titlemark'>1.3   </span> <a id='x1-50001.3'></a>One-One (Injective) Functions</h4>
+<!-- l. 30 --><p class='noindent'>A function <span class='mathjax-inline'>\( f: A \to B \)</span> is called <span class='cmbx-10'>one-one </span>or <span class='cmbx-10'>injective </span>if for every <span class='mathjax-inline'>\( a_1, a_2 \in A \)</span>, whenever <span class='mathjax-inline'>\( f(a_1) = f(a_2) \)</span>, it follows that <span class='mathjax-inline'>\( a_1 = a_2 \)</span>.
+In other words, different elements in the domain map to different elements in the
+codomain.
+   
+</p>
+   <h4 class='subsectionHead' id='onto-surjective-functions'><span class='titlemark'>1.4   </span> <a id='x1-60001.4'></a>Onto (Surjective) Functions</h4>
+<!-- l. 33 --><p class='noindent'>A function <span class='mathjax-inline'>\( f: A \to B \)</span> is called <span class='cmbx-10'>onto </span>or <span class='cmbx-10'>surjective </span>if for every element <span class='mathjax-inline'>\( b \in B \)</span>, there exists at least
+one element <span class='mathjax-inline'>\( a \in A \)</span> such that <span class='mathjax-inline'>\( f(a) = b \)</span>. This means that the function covers the entire
+codomain.
+   
+</p>
+   <h4 class='subsectionHead' id='homomorphisms'><span class='titlemark'>1.5   </span> <a id='x1-70001.5'></a>Homomorphisms</h4>
+<!-- l. 36 --><p class='noindent'>[<span class='cmbx-10'>dummit2004abstract</span>] A <span class='cmbx-10'>homomorphism </span>is a structure-preserving map
+between two algebraic structures. Formally, if <span class='mathjax-inline'>\( (G, *) \)</span> and <span class='mathjax-inline'>\( (H, \cdot ) \)</span> are groups, a function <span class='mathjax-inline'>\( \phi : G \to H \)</span> is a
+<span class='cmbx-10'>homomorphism </span>if for all <span class='mathjax-inline'>\( a, b \in G \)</span>, </p><div class='mathjax-block'>\[ \phi (a * b) = \phi (a) \cdot \phi (b). \]</div><p> This property ensures that the operation is preserved
+under the mapping.
+   
+   </p><h3 class='sectionHead' id='insight'><span class='titlemark'>2   </span> <a id='x1-80002'></a>Insight</h3>
+   
+                                                                  
+
+                                                                  
+   <h4 class='subsectionHead' id='function'><span class='titlemark'>2.1   </span> <a id='x1-90002.1'></a>Function</h4>
+<!-- l. 45 --><p class='noindent'>A function is defined in preliminaries, right? But here we will dive deep into why a
+function is invoked in mathematics. The following observations may not
+be the way historically functions have been invoked in mathematics. But
+the following observations are rather based on visualization of equivalence
+of mathematical structures, which will help us understand how peculiar
+definitions of different functions between different mathematical models
+are brought into action. Without further discussion, let us dive into our
+discussion:
+   
+</p>
+   <h5 class='subsubsectionHead' id='equality-of-set-a-and-b'><span class='titlemark'>2.1.1   </span> <a id='x1-100002.1.1'></a>Equality of Set A and B:</h5>
+<!-- l. 48 --><p class='noindent'>Suppose we have two sets A and B. We say <span class='mathjax-inline'>\(A=B\)</span> iff <span class='mathjax-inline'>\(A\subseteq B\)</span> and <span class='mathjax-inline'>\(B\subseteq A\)</span>. But suppose <span class='mathjax-inline'>\(A\neq B\)</span>, then is there any
+comment we can make about them?
+   
+</p>
+   <h5 class='subsubsectionHead' id='equivalence-of-a-and-b'><span class='titlemark'>2.1.2   </span> <a id='x1-110002.1.2'></a>Equivalence Of A and B:</h5>
+<!-- l. 51 --><p class='noindent'>Imagine <span class='mathjax-inline'>\(A = \{a, b, c, d\}\)</span> and <span class='mathjax-inline'>\(B = \{e, f, g, h\}\)</span>. However, if <span class='mathjax-inline'>\(a \neq e\)</span>, <span class='mathjax-inline'>\(b \neq f\)</span>, and so on, it seems that A and B can overlap. That is,
+if we place set A on top of set B, they will match at the points <span class='mathjax-inline'>\(a \rightarrow e\)</span>, <span class='mathjax-inline'>\(b \rightarrow f\)</span>, and so forth. They
+can be thought of as nodes or ends of threads when stitching two pieces of clothing,
+A and B. Look at the following images:
+</p>
+<div class='center'>
+<!-- l. 53 --><p class='noindent'>
+</p><!-- l. 54 --><p class='noindent'><img alt='abcdefgh' src='main0x.svg' /></p></div>
+<!-- l. 78 --><p class='indent'>   This diagram represents a function mapping elements from <span class='mathjax-inline'>\( A \)</span> to <span class='mathjax-inline'>\( B \)</span>, demonstrating
+their structured correspondence.
+                                                                  
+
+                                                                  
+</p><!-- l. 80 --><p class='indent'>   In the above diagram what we see is the prototype for a bijective function. So, we
+need function to connect a node of <span class='mathjax-inline'>\(A\)</span> with thread to a node of <span class='mathjax-inline'>\(B\)</span>. If the connection is
+unique we say the function is 1-1. And from the other side i.e. from <span class='mathjax-inline'>\(B\)</span> to <span class='mathjax-inline'>\(A\)</span> if the same
+unique connection happens we say this thing to be onto-ness of <span class='mathjax-inline'>\(f\)</span>. Actually we want B
+also to connect A from each of B’s node so, for each element(node) of B we have a
+element in A that we can connect with thread and this property actually
+called onto-ness in actual manner. But as f is 1-1 from A to B together with
+onto-ness it is easy to see that the oposite functon from B to A also becomes 1-1
+as each of B point is connected to some point of A by onto-ness and this
+point of A must be unique otherwise connection from A to B will not be
+unique.
+   
+</p>
+   <h5 class='subsubsectionHead' id='bijective-functions'><span class='titlemark'>2.1.3   </span> <a id='x1-120002.1.3'></a>Bijective Functions</h5>
+<!-- l. 83 --><p class='noindent'>The discussion above gives us overview of why a function is needed and what a
+bijective function should be by natural choice. So, a connection bewteen <span class='mathjax-inline'>\(f:A\rightarrow B\)</span> be bijective
+function if it follows the folowing properties: </p>
+     <ul class='itemize1'>
+     <li class='itemize'>Every element or node of A should be connected to some node of B and the
+     cnnection should be unique in the sense one node from A should connect
+     to only one node of B same as stitching for overlapping.
+     </li>
+     <li class='itemize'>Now, somethings stiching may be inappropiate and we can stitch two or
+     more nodes of A to a single node of B but we avoid this to have proper
+     overlapping of A onto B so, this is called 1-1, i.e. <span class='mathjax-inline'>\(f(x)=f(y)\Rightarrow x=y\)</span>.
+     </li>
+     <li class='itemize'>
+     <!-- l. 88 --><p class='noindent'>If we see from the other side also for verification finally that no nodes of
+     B left out stitching with nodes of A. otherwise proper overlapping will
+     not work. i.e. <span class='mathjax-inline'>\(\forall y \in B \exists x\in A\)</span> s.t. <span class='mathjax-inline'>\(f(x)=y\)</span>, i.e. <span class='mathjax-inline'>\(x\)</span> is stitched to <span class='mathjax-inline'>\(y\)</span>. if this condition fails we say A in
+     embedded into B, i.e. A is equivalent to a subset of B given that above
+     two conditions are satisfied. and we write, <span class='mathjax-inline'>\(A\cong f(A)\subseteq B\)</span>
+</p>
+     <div class='center'>
+<!-- l. 92 --><p class='noindent'>
+                                                                  
+
+                                                                  
+</p><!-- l. 93 --><p class='noindent'><img alt='Bfabcd(A )' src='main1x.svg' /></p></div>
+     </li></ul>
+   
+   <h4 class='subsectionHead' id='homomorphism'><span class='titlemark'>2.2   </span> <a id='x1-130002.2'></a>Homomorphism</h4>
+   
+   <h5 class='subsubsectionHead' id='group'><span class='titlemark'>2.2.1   </span> <a id='x1-140002.2.1'></a>Group</h5>
+<!-- l. 112 --><p class='noindent'>What is group, it is nothing but a set along with a extra structure which is the
+operation of the group. So, our aim is to get some conditions like above to identify
+when we say two group are equivalent. As, group are first of all sets so, the
+underlying sets must be equivalent so, there must be a bijective function in between
+them say, <span class='mathjax-inline'>\(F:(G_1,*_1)\rightarrow (G_2,*_2)\)</span>.
+</p>
+     <ul class='itemize1'>
+     <li class='itemize'>F must be bijective function as per above section discussion about set
+     equivalence.
+     </li>
+     <li class='itemize'>But what else? we need something more as groups are not only sets they
+     have a underlying structure that is generated fromthe operation on that
+     set.</li></ul>
+<div class='center'>
+<!-- l. 119 --><p class='noindent'>
+                                                                  
+
+                                                                  
+</p><!-- l. 120 --><p class='noindent'><img alt='GGabaFFFF12,b(((aba))) ⋅ F(b)' src='main2x.svg' /></p></div>
+<!-- l. 145 --><p class='indent'>   So, notice the two elements <span class='mathjax-inline'>\(a\)</span> and <span class='mathjax-inline'>\(b\)</span> are tied to a third element <span class='mathjax-inline'>\(a*_1b\)</span> always ie given these
+two elements we always get a third element <span class='mathjax-inline'>\(a*_1b\)</span>. This is the extra structure that a
+normal set lacks. So, we need to overlap that structure also. So, given <span class='mathjax-inline'>\(a,b\in G_1\)</span> we have <span class='mathjax-inline'>\(F(a),F(b)\in B\)</span>
+connected by thread ie overlapped already set theoretically now, we have <span class='mathjax-inline'>\(a*_1b\in G_1\)</span> and
+corresponding <span class='mathjax-inline'>\(F(a)*_2F(b)\in G_2\)</span>. So, we need to overlap these elements too. That is these two
+elemets should be connected by a thread to overlap the final structure i.e. we
+need
+</p>
+   <div class='mathjax-env mathjax-equation'>\begin{equation} F(a*_1b)=F(a)*_2F(b) \end{equation}</div><p><a id='x1-14001r1'></a>
+<!-- l. 155 --></p><p class='indent'>   And hence we need these extra condition also you guys might argue that why
+not we are checking these above condition from <span class='mathjax-inline'>\(G_2 \rightarrow G_1\)</span> but that will be satisfied
+automatically like the <span class='mathjax-inline'>\(B \rightarrow A\)</span> 1-1 ness was statisfied automatically in case of set
+theoritical point of view. Similarly, here it is easy to verify <span class='mathjax-inline'>\(F^{-1}\)</span> also satisfy equation
+(1).
+   
+</p>
+   <h3 class='sectionHead' id='appendix'><span class='titlemark'>3   </span> <a id='x1-150003'></a>Appendix</h3>
+   
+   <h4 class='subsectionHead' id='about-me'><span class='titlemark'>3.1   </span> <a id='x1-160003.1'></a>About Me</h4>
+<!-- l. 159 --><p class='noindent'>I am Atrajit Sarkar, currently doing Phd on Analysis from IISER PUNE, INDIA. My
+experties are in analysis and pure mathematics,coding and technology. You can check
+out the following sites about myself: </p>
+     <ul class='itemize1'>
+     <li class='itemize'><a href='www.gongobongo.org'>Gongo Bongo</a>
+     </li>
+     <li class='itemize'><a href='https://founder.gongobongo.org'>My Blog Site</a>
+     </li>
+     <li class='itemize'><a href='https://atrajit-sarkar.gongobongo.org'>My Portfolio Site</a></li></ul>
+    
+</body> 
+</html>

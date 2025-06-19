@@ -1,0 +1,491 @@
+ 
+/* Enhanced CSS for WhyHomomorphism - Modern, Animated, and Readable */
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400&family=Open+Sans:wght@300;400;600;700&family=Fira+Code:wght@400;500&display=swap');
+
+/* Base Typography */
+body {
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.6;
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 2rem;
+  background-color: #f9f9f9;
+  color: #333;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Dark mode support with smooth transition */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #1a1a1a;
+    color: #e6e6e6;
+  }
+  
+  img[src^="main"] {
+    filter: invert(1);
+    transition: filter 0.3s ease;
+  }
+  
+  a {
+    color: #80b3ff;
+  }
+  
+  .maketitle, h1, h2, h3, h4, h5 {
+    color: #e6e6e6;
+  }
+  
+  pre.verbatim, code.verb {
+    background-color: #2d2d2d;
+    border-color: #444;
+  }
+  
+  table.tabular {
+    border-color: #444;
+  }
+  
+  .fbox, .framebox-c, .framebox-l, .framebox-r {
+    border-color: #555;
+  }
+}
+
+/* Headings with improved typography and subtle animations */
+h1, h2, h3, h4, h5 {
+  font-family: 'Merriweather', serif;
+  line-height: 1.3;
+  margin-top: 1.5em;
+  margin-bottom: 0.8em;
+  color: #2c3e50;
+  position: relative;
+  overflow: hidden;
+}
+
+h1::after, h2::after, h3::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #3498db;
+  transition: width 0.5s ease;
+}
+
+h1:hover::after, h2:hover::after, h3:hover::after {
+  width: 100%;
+}
+
+/* Title styling */
+.titleHead, h2.titleHead {
+  font-size: 2.5em;
+  text-align: center;
+  margin-bottom: 0.5em;
+  color: #2c3e50;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  animation: fadeInDown 1s ease-out;
+}
+
+/* Section headings */
+.sectionHead {
+  font-size: 1.8em;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 0.3em;
+  transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.sectionHead:hover {
+  color: #3498db;
+}
+
+.subsectionHead {
+  font-size: 1.4em;
+  border-left: 3px solid #3498db;
+  padding-left: 0.5em;
+  transition: color 0.3s ease, border-left 0.3s ease;
+}
+
+.subsectionHead:hover {
+  color: #3498db;
+  border-left-width: 5px;
+}
+
+.subsubsectionHead {
+  font-size: 1.2em;
+  color: #3498db;
+  transition: color 0.3s ease;
+}
+
+.subsubsectionHead:hover {
+  color: #2980b9;
+}
+
+/* Paragraphs with improved readability */
+p {
+  margin-top: 0;
+  margin-bottom: 1em;
+  text-align: justify;
+  hyphens: auto;
+  line-height: 1.8;
+}
+
+p.indent {
+  text-indent: 1.5em;
+}
+
+p + p {
+  margin-top: 1em;
+}
+
+p + div, p + pre {
+  margin-top: 1.5em;
+}
+
+div + p, pre + p {
+  margin-top: 1.5em;
+}
+
+/* Links with hover effects */
+a {
+  color: #3498db;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-word;
+  hyphens: auto;
+}
+
+a:hover {
+  color: #2980b9;
+  border-bottom: 1px solid #2980b9;
+}
+
+a:focus {
+  outline: 2px solid #3498db;
+  outline-offset: 2px;
+}
+
+/* Code blocks with syntax highlighting style */
+pre.verbatim {
+  font-family: 'Fira Code', monospace;
+  text-align: left;
+  clear: both;
+  background-color: #f5f5f5;
+  padding: 1em;
+  border-radius: 5px;
+  border-left: 4px solid #3498db;
+  overflow-x: auto;
+  margin: 1.5em 0;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: border-left 0.3s ease, box-shadow 0.3s ease;
+}
+
+pre.verbatim:hover {
+  border-left: 6px solid #2980b9;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+code.verb {
+  font-family: 'Fira Code', monospace;
+  background-color: #f5f5f5;
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+  font-size: 0.9em;
+}
+
+/* Math display improvements */
+img.math {
+  vertical-align: middle;
+  max-width: 100%;
+  height: auto;
+}
+
+div.par-math-display, div.math-display {
+  text-align: center;
+  margin: 1.5em 0;
+  overflow-x: auto;
+}
+
+.mathjax-block {
+  overflow-x: auto;
+  margin: 1.5em 0;
+  padding: 1em 0;
+  transition: transform 0.3s ease;
+}
+
+.mathjax-block:hover {
+  transform: scale(1.02);
+}
+
+/* Tables with better styling */
+table.tabular {
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin: 1.5em auto;
+  width: auto;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+table.tabular:hover {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+table.tabular td, table.tabular th {
+  padding: 0.5em 1em;
+  border: 1px solid #ddd;
+}
+
+table.tabular tr:nth-child(even) {
+  background-color: rgba(0,0,0,0.03);
+}
+
+/* Lists with better spacing and bullets */
+ul.itemize1, ol.enumerate1 {
+  padding-left: 1.5em;
+  margin: 1em 0;
+}
+
+ul li.itemize, ol li.enumerate {
+  margin-left: 1rem;
+  margin-bottom: 0.5em;
+  position: relative;
+}
+
+ul li.itemize::before {
+  content: '';
+  position: absolute;
+  left: -1.2em;
+  top: 0.6em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #3498db;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+ul li.itemize:hover::before {
+  transform: scale(1.5);
+  background-color: #2980b9;
+}
+
+/* Table of contents styling */
+.tableofcontents {
+  background-color: rgba(52, 152, 219, 0.05);
+  border-left: 3px solid #3498db;
+  padding: 1em 1.5em;
+  margin: 2em 0;
+  border-radius: 0 5px 5px 0;
+  transition: background-color 0.3s ease;
+}
+
+.tableofcontents:hover {
+  background-color: rgba(52, 152, 219, 0.1);
+}
+
+.tableofcontents span a {
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+
+.tableofcontents span a:hover {
+  transform: translateX(5px);
+}
+
+/* Figures and captions */
+figure.float, div.figure {
+  margin: 2em auto;
+  text-align: center;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+figcaption.caption, div.caption {
+  font-style: italic;
+  font-size: 0.9em;
+  margin-top: 0.5em;
+  color: #666;
+}
+
+/* Author and date information */
+div.author, div.date {
+  text-align: center;
+  margin-bottom: 1em;
+  font-family: 'Open Sans', sans-serif;
+  animation: fadeIn 1s ease-out;
+}
+
+div.author {
+  font-size: 1.2em;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+div.date {
+  font-size: 1em;
+  color: #666;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  body {
+    padding: 1rem;
+    font-size: 16px;
+  }
+  
+  .titleHead, h2.titleHead {
+    font-size: 2em;
+  }
+  
+  .sectionHead {
+    font-size: 1.5em;
+  }
+  
+  .subsectionHead {
+    font-size: 1.3em;
+  }
+  
+  pre.verbatim {
+    padding: 0.8em;
+  }
+  
+  .tableofcontents {
+    padding: 0.8em;
+  }
+}
+
+/* Print styles */
+@media print {
+  body {
+    max-width: none;
+    padding: 1cm;
+    font-size: 11pt;
+    background-color: white !important;
+    color: black !important;
+  }
+  
+  a {
+    color: black !important;
+    text-decoration: underline;
+    border-bottom: none;
+  }
+  
+  pre.verbatim, code.verb {
+    background-color: #f8f8f8 !important;
+    border: 1px solid #ddd !important;
+  }
+  
+  div.crosslinks {
+    visibility: hidden;
+  }
+  
+  h1::after, h2::after, h3::after {
+    display: none;
+  }
+  
+  .tableofcontents {
+    background-color: transparent !important;
+    border-left: 1px solid #ddd !important;
+  }
+}
+
+/* Preserve original class styles with enhancements */
+.cmr-7 { font-size: 70%; }
+.cmr-17 { font-size: 170%; }
+.cmr-12 { font-size: 120%; }
+.cmbx-10 { font-weight: bold; }
+
+/* Additional enhancements for specific elements */
+.maketitle {
+  text-align: center;
+  margin-bottom: 3em;
+  padding-bottom: 2em;
+  border-bottom: 1px solid #eee;
+  animation: fadeIn 1.5s ease-out;
+}
+
+div.center, div.center div.center {text-align: center; margin-left:auto; margin-right:auto; width: 100%;}
+
+/* SVG images with hover effect - centered */
+img[src$=".svg"] {
+  max-width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+img[src$=".svg"]:hover {
+  transform: scale(1.05);
+}
+
+/* Footnotes and references */
+span.footnote-mark sup.textsuperscript, 
+span.footnote-mark a sup.textsuperscript {
+  font-size: 80%;
+  color: #3498db;
+  transition: color 0.3s ease;
+}
+
+span.footnote-mark:hover sup.textsuperscript, 
+span.footnote-mark:hover a sup.textsuperscript {
+  color: #2980b9;
+}
+
+/* Bibliography styling */
+.thebibliography {
+  margin: 2em 0;
+  padding-top: 1em;
+  border-top: 1px solid #eee;
+}
+
+.thebibliography dl {
+  display: grid;
+  grid-auto-columns: min-content 1fr;
+  grid-auto-flow: column;
+  margin-bottom: 0.5em;
+}
+
+.thebibliography dt {
+  grid-column: 1;
+  margin-bottom: 0.5em;
+  font-weight: bold;
+  color: #3498db;
+}
+
+p.bibitem, p.bibitem-p {
+  text-indent: -2em;
+  margin-left: 2em;
+  margin-top: 0.6em;
+  margin-bottom: 0.6em;
+  transition: background-color 0.3s ease;
+  padding: 0.3em 0;
+}
+
+p.bibitem:hover, p.bibitem-p:hover {
+  background-color: rgba(52, 152, 219, 0.05);
+}
+
